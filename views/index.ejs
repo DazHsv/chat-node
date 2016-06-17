@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="/a/ed-grid.css">
+  <link rel="stylesheet" href="/a/styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  <title>Chat</title>
+</head>
+<body ng-app="Chat">
+    <header id="header">
+      <div class="ed-container">
+        <div class="ed-item">
+          <h1 class="title">Chat</h1>
+        </div>
+      </div>
+    </header>
+    <main id="main" ng-controller="MessageCtrl">
+      <div class="ed-container no-padding">
+        <div class="ed-item">
+          <div id="chat" class="ed-container">
+            <div class="message-{{msg.from}} ed-item" ng-repeat="msg in messages">
+              <span classe="time">{{msg.date}} || </span>
+              <strong class="user">{{msg.user}}</strong>:
+              <span class="content">{{msg.body}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="controls">
+        <div class="ed-container">
+          <div class="ed-item">
+            <form ng-submit="sendMsg()">
+              <div class="ed-container">
+                <div class="ed-item base-80 movil-90 no-padding">
+                  <input type="text" ng-model="message" />
+                </div>
+                <div class="ed-item base-10 movil-10">
+                  <input type="submit" value="Enviar" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  <script src="/a/app.js"></script>
+</body>
+</html>

@@ -8,7 +8,7 @@ angular.module('Chat',[])
       if($scope.message != ""){
         var msg = {
           body:$scope.message,
-          date: new Date()
+          date: new Date().getTime()
         };
 
         socket.emit('message',msg);
@@ -19,7 +19,6 @@ angular.module('Chat',[])
     socket.on('message', function(msg){
       $scope.$apply(function(){
         $scope.messages.push(msg);
-        chat.scrollTop = chat.style.height;
       });
     });
   });

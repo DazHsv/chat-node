@@ -23,6 +23,7 @@ input[type="text"] {
 	border: 2px solid steelblue;
 	padding: .5em;
 	box-sizing: border-box;
+	border-radius: 5px;
 }
 
 #main {
@@ -42,7 +43,8 @@ input[type="submit"] {
 	color:#fff;
 	border:none;
 	line-height: 3em;
-	padding: 0 .5em;
+	padding: 0 1em;
+	border-radius: 5px;
 }
 
 #controls {
@@ -60,4 +62,16 @@ input[type="submit"] {
 .message-server {
 	background-color: tomato;
 	color: #fff;
+}
+
+.time, .content {
+	display: inline-block;
+	line-height: 1.5em;
+	padding: 0 1.1em;
+	margin: 0.1em 0;
+}
+
+.time {
+	background-color: steelblue;
+	color:#fff;
 }

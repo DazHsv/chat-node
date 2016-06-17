@@ -22,8 +22,7 @@
         <div class="ed-item">
           <div id="chat" class="ed-container">
             <div class="message-{{msg.from}} ed-item" ng-repeat="msg in messages">
-              <span classe="time">{{msg.date}} || </span>
-              <strong class="user">{{msg.user}}</strong>:
+              <span class="time">{{ msg.date | date:'MM/dd/yyyy @ h:mma'}}</span>
               <span class="content">{{msg.body}}</span>
             </div>
           </div>
@@ -34,10 +33,10 @@
           <div class="ed-item">
             <form ng-submit="sendMsg()">
               <div class="ed-container">
-                <div class="ed-item base-80 movil-90 no-padding">
+                <div class="ed-item base-75 movil-85 web-90 no-padding">
                   <input type="text" ng-model="message" />
                 </div>
-                <div class="ed-item base-10 movil-10">
+                <div class="ed-item base-10 movil-10 web-10">
                   <input type="submit" value="Enviar" />
                 </div>
               </div>

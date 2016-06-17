@@ -29,4 +29,6 @@ io.on('connection',function(socket){
     });
 });
 
-server.listen(8080);
+var ip = OPENSHIFT_NODEJS_IP || '127.0.0.1',
+    port = OPENSHIFT_NODEJS_PORT || 8080;
+server.listen(port,ip);

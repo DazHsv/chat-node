@@ -1,3 +1,5 @@
-The OpenShift `nodejs` cartridge documentation can be found at:
+# Simple chat con NodeJS, Socket.io y AngularJS
 
-http://openshift.github.io/documentation/oo_cartridge_guide.html#nodejs
+Despues de descargar el código, es necesario ejecutar _npm install_
+
+no fue algo hecho profecionalmente, solo fue una prueba, por ello el código está muy mal organizado, pero es funcional.
